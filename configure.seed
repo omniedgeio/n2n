@@ -17,13 +17,6 @@ AC_CHECK_LIB([crypto], [AES_cbc_encrypt])
 
 N2N_LIBS=
 
-if test "x$ac_cv_lib_crypto_AES_cbc_encrypt" != xyes; then
-  AC_MSG_RESULT(Building n2n without AES support)
-else
-  AC_DEFINE([N2N_HAVE_AES], [], [Have AES support])
-  N2N_LIBS=-lcrypto
-fi
-
 AC_CHECK_LIB([pcap], [pcap_open_live], pcap=true)
 
 if test x$pcap != x; then
