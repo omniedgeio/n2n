@@ -23,6 +23,7 @@ ifeq ($(OPENSSL_CFLAGS), 0)
 endif
 
 CFLAGS+=$(DEBUG) $(OPTIMIZATION) $(WARN) $(OPTIONS) $(PLATOPTS)
+CFLAGS+=-fpic
 
 INSTALL=install
 MKDIR=mkdir -p
